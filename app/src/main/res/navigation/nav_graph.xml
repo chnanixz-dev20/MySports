@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- The 4 bottom bar destinations -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mysports.ScreenFragment"
+        android:label="Home">
+        <argument
+            android:name="title"
+            android:defaultValue="Home Fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.mysports.ScreenFragment"
+        android:label="Account">
+        <argument
+            android:name="title"
+            android:defaultValue="Account Fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mysports.ScreenFragment"
+        android:label="Profile">
+        <argument
+            android:name="title"
+            android:defaultValue="Profile Fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mySportsFragment"
+        android:name="com.example.mysports.MySportsFragment"
+        android:label="My Sports">
+        <action
+            android:id="@+id/action_mySports_to_football"
+            app:destination="@id/footballFragment" />
+        <action
+            android:id="@+id/action_mySports_to_basketball"
+            app:destination="@id/basketballFragment" />
+        <action
+            android:id="@+id/action_mySports_to_tennis"
+            app:destination="@id/tennisFragment" />
+    </fragment>
+
+    <!-- The secondary destinations (the sports) -->
+    <fragment
+        android:id="@+id/footballFragment"
+        android:name="com.example.mysports.ScreenFragment"
+        android:label="Football">
+        <argument
+            android:name="title"
+            android:defaultValue="Football Fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/basketballFragment"
+        android:name="com.example.mysports.ScreenFragment"
+        android:label="Basketball">
+        <argument
+            android:name="title"
+            android:defaultValue="Basketball Fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tennisFragment"
+        android:name="com.example.mysports.ScreenFragment"
+        android:label="Tennis">
+        <argument
+            android:name="title"
+            android:defaultValue="Tennis Fragment"
+            app:argType="string" />
+    </fragment>
+</navigation>
